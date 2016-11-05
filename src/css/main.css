@@ -6,3 +6,38 @@
     background-color: #EF4035;
     border-radius: 0;
 }
+
+.packet {
+    background-color: #6d1c17;
+    padding: 4em;
+    display: flex;    
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.packet-testimonial {
+    padding-right: 6em;
+    min-width: 200px;
+}
+
+.packet blockquote {
+    color: white;
+}
+
+.packet-request {
+    background-color:white;
+    padding: 3em;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.packet-request h2 {
+    display:inline-block;
+    width: 70%;
+}
+
+.packet-request button {
+    display:inline-block;
+    width: 29%;
+}
