@@ -6,97 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
+        <!-- Bootstrap -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid wrapper">
+            <nav class="navbar menu">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <div class="logo-container">
+                                <img src="images/Wordmark.png" >
+                            </div>
+                        </a>
+                    </div>
 
-    <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/main.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container-fluid nabvar-container">
-        <img class="col-md-1" src="images/wsf.png">
-        <nav class="navbar menu col-md-11">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">WHAT IS WSF?</a></li>
-                        <li><a href="#">THE PROGRAM</a></li>
-                        <li><a href="#">OUR TEAM</a></li>
-                        <li><a href="#">SUCCESS STORIES</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                        <li><button class="btn navbar-btn">GET INVOLVED</button></li>
-                        <li><button class="btn navbar-btn">GET HELP</button></li>
-                    </ul>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a href="#">WHAT IS WSF?</a></li>
+                            <li><a href="#">THE PROGRAM</a></li>
+                            <li><a href="#">OUR TEAM</a></li>
+                            <li><a href="#">SUCCESS STORIES</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <button class="btn navbar-btn">GET INVOLVED</button>
+                                <button class="btn prominent navbar-btn">GET HELP</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <!--Main title area-->
+            <div class="container-fluid main-title-area row">
+                <div class="container-fluid text-content vertical-center col-md-6">
+                    <h1>Main Title Area</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                 </div>
             </div>
-        </nav>
-    </div>
 
-    <!--Main title area-->
-    <div class="container-fluid main-title-area">
-        <!-- Roughly 70vh in height -->
-    </div>
-
-    <!-- Call to action bar -->
-    <div class="container-fluid call-to-action">
-        <!-- Roughly 15vh in height -->
-        <h1 class="call-to-action-label"></h1>
-        <div class="call-to-action-actions">
-            <button class="btn navbar-btn">GET HELP</button>
-            <button class="btn navbar-btn">GET INVOLVED</button>
-        </div>
-    </div>
-
-
-    <!-- Photo grid -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4">col 1</div>
-            <div class="col-md-4">col 2</div>
-            <div class="col-md-4">col 3</div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">col 1</div>
-            <div class="col-md-4">col 2</div>
-            <div class="col-md-4">col 3</div>
-        </div>
-    </div>
-
-    <!-- Emotional connection -->
-    <div class="container-fluid">
-        <h1>You are not alone</h1>
-        <p>emotional text</p>
-    </div>
-
-    <!-- Emotional connection -->
-    <div class="row container-fluid packet">
-        <div class="packet-testimonial">
-            <blockquote>
-                <p>"For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally."</p>
-                <footer>From WWF's website</footer>
-            </blockquote>
-        </div>
-        <div class="packet-request">
-            <div>
-                <h2>Introduce the packet</h2>
-                <p>
-                    Blessed is the man who doesn't walk in the counsel of the wicked, nor stand in the way of sinners, nor sit in the seat of scoffers; but his delight is in Yahweh's law.
-                    On his law he meditates day and night.
-                    He will be like a tree planted by the streams of water, that brings forth its fruit in its season, whose leaf also does not wither.
-                    Go back to home
-                </p>
+            <!-- Call to action bar -->
+            <div class="container-fluid call-to-action row">
+                <!-- Roughly 15vh in height -->
+                <h3 class="call-to-action-label">Where hurting and healing connect</h3>
+                <div class="call-to-action-actions">
+                    <button class="btn">GET INVOLVED</button>
+                    <button class="btn prominent">GET HELP</button>
+                </div>
             </div>
-            <hr />
-            <div>
-                <h2>Get your packet today</h2>
-                <button class="btn navbar-btn">Button</button>
-            </div>
-        </div>
-       
-    </div>
 
-    <footer class="container-fluid">
-        <!-- Content TBD -->
-    </footer>
+
+            <!-- Photo grid -->
+            <div class="container-fluid photo-grid row">
+                <div class="row">
+                    <div class="text col-md-4 col-xs-9">
+                        <div class="vertical-center">
+                            <h3>Free & confidential</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                    <div class="image col-md-4 col-xs-3">Image</div>
+                    <div class="text col-md-4 col-md-push-0 col-xs-9 col-xs-push-3">
+                        <div class="vertical-center">
+                            <h3>Biblical & Faith-Based</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                    <div class="image col-md-4 col-md-pull-0 col-xs-3 col-xs-pull-9">Image</div>
+                    <div class="text col-md-4 col-xs-9">
+                        <div class="vertical-center">
+                            <h3>Private Support Network</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                    <div class="image col-md-4 col-xs-3">Image</div>
+                </div>
+            </div>
+
+            <!-- Emotional connection -->
+            <div class="container-fluid emotional-connection row">
+                <h1 class="col-md-12">You are not alone</h1>
+                <p class="col-md-6 col-md-offset-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <!-- Emotional connection -->
+            <div class="row container-fluid packet">
+                <div class="col-md-6 packet-testimonial">
+                    <blockquote>
+                        <p>"For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally."</p>
+                        <footer>From WWF's website</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-6 packet-request">
+                    <div>
+                        <h2>Introduce the packet</h2>
+                        <p>
+                            Blessed is the man who doesn't walk in the counsel of the wicked, nor stand in the way of sinners, nor sit in the seat of scoffers; but his delight is in Yahweh's law.
+                            On his law he meditates day and night.
+                            He will be like a tree planted by the streams of water, that brings forth its fruit in its season, whose leaf also does not wither.
+                            Go back to home
+                        </p>
+                    </div>
+                    <hr />
+                    <div>
+                        <h2>Get your packet today</h2>
+                        <button class="btn navbar-btn">Button</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="container-fluid">
+                <!-- Content TBD -->
+            </footer>
+        </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
