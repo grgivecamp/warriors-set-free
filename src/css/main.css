@@ -30,6 +30,21 @@ h1, h2, h3 {
 }
 
 /* Navbar */
+@media (min-width: 768px) and (max-width: 1110px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+}
+
 .navbar.menu {
     background-color: #EF4035;
     border-radius: 0;
@@ -49,6 +64,11 @@ h1, h2, h3 {
 
 .navbar-brand {
     padding: 0;
+}
+
+.navbar-collapse.collapse.in ul.navbar-nav,
+.navbar-collapse.collapsing ul.navbar-nav{
+    margin-top: 25px;
 }
 
 .navbar-nav > li > a {
