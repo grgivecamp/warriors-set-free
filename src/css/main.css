@@ -144,9 +144,24 @@ h1, h2, h3 {
     display: inline-block;
 }
 
+/* Inner */
+.inner-page-title .row > div {
+    height: 50vh;
+    z-index: -1;
+}
 
+.inner-page-section .row > div {
+    height: 30vh;
+    z-index: -1;
+}
 
+.inner-page-section .text {
+    background-color: #eee;
+}
 
+.inner-page-section .blank {
+    background-color: #aaa;
+}
 
 
 
