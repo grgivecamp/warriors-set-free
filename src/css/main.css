@@ -1,5 +1,5 @@
 body {
-    max-width: 1400px;
+    /*max-width: 1400px;*/
     margin: auto
 }
 
@@ -133,7 +133,6 @@ h1, h2, h3 {
     background-color: #aaa;
 }
 
-
 /* Emotional Connection */
 .emotional-connection {
     text-align: center;
@@ -146,11 +145,12 @@ h1, h2, h3 {
 
 /* Packet Request */
 .packet {
-    background-color: #6d1c17;
+    background-color: #aaa;
     padding: 4em;
     display: flex;    
     align-items: center;
     flex-wrap: wrap;
+    color: white;
 }
 
 .packet-testimonial {
@@ -158,21 +158,16 @@ h1, h2, h3 {
     min-width: 200px;
 }
 
-.packet blockquote {
-    color: white;
-}
-
 .packet-request {
-    background-color:white;
+    background-color:#EF4035;
     padding: 3em;
 }
 
 .packet-request h2 {
     display:inline-block;
-    width: 70%;
 }
 
 .packet-request button {
     display:inline-block;
-    width: 29%;
+    float:right;
 }
