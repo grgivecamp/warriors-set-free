@@ -1,0 +1,48 @@
+.pageHeader {
+  @extend .row;
+  @extend .main-title-area;
+  display: flex;
+  height: 80vh;
+  &:not(.has-background) {
+    .header-textarea {
+      background: #FFF;
+    }
+  }
+  &.has-background {
+    .header-textarea {
+      h1, h2, p {
+        color: #FFF;
+      }
+      h1 {
+        font-weight: 400;
+      }
+      h2 {
+        font-weight: 200;
+        font-size: 1.5em;
+      }
+      p {
+        line-height: 1.5em;
+      }
+    }
+  }
+  .header-textarea,
+  .header-image {
+    width: 50%;
+    height: 100%;
+  }
+  .header-textarea {
+    padding: 20px;
+    @extend .vertical-center;
+  }
+  .header-image {
+    position: relative;
+    img {
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 250px);
+    }
+  }
+  &.has-image {
+
+  }
+}

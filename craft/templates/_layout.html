@@ -17,10 +17,7 @@
 		<div class="container wrapper">
 				{% include 'partials/_nav' %}
 
-				{% block content %}
-					<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-					<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-				{% endblock %}
+				{% block content %}{% endblock %}
 
 				<!-- Emotional connection -->
 				<div class="row container-fluid packet vertical-center">
@@ -54,6 +51,8 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="../js/bootstrap.min.js"></script>
+		{% includeJsFile "/js/bootstrap.min.js" %}
+		{% includeJsFile "/js/twitterfetcher.min.js" %}
+		{% includeJsFile "/js/scripts.js" %}
 	</body>
 </html>

@@ -1,0 +1,137 @@
+{% for block in entry.pageBuilder %}
+
+  {% if block.type == "pageHeader" %}
+
+    {% if block.headerBackground|length == 1 %}
+        {% set image = block.headerBackground.first %}
+        <div class="pageHeader {{ block.headerStyle }} has-background" style="background: url({{ image.getUrl('headerBackground') }}) no-repeat center center; background-size: cover;">
+    {% else %}
+        <div class="pageHeader {{ block.headerStyle }}">
+    {% endif %}
+      <div class="header-textarea">
+        <div class="block">
+          {% if block.headerTitle|length %}
+            <h1>{{ block.headerTitle }}</h1>
+          {% endif %}
+          {% if block.headerSubtitle|length %}
+            <h2>{{ block.headerSubtitle }}</h2>
+          {% endif %}
+          {% if block.headerText|length %}
+            {{ block.headerText }}
+          {% endif %}
+        </div>
+      </div>
+      {% if block.headerImage|length == 1 %}
+        {% set image = block.headerImage.first %}
+        <div class="header-image">
+          <img src="{{ image.getUrl() }}" />
+        </div>
+      {% endif %}
+    </div>
+  {% elseif block.type == "callToAction" %}
+    <div class="call-to-action row">
+      <h2 class="call-to-action-label">{{ block.ctaTitle }}</h2>
+      {% if block.ctaText|length %}
+        <p>{{ block.ctaText }}</p>
+      {% endif %}
+      <div class="call-to-action-actions">
+          <button class="btn">{{ block.secondaryButtonLabel }}</button>
+          <button class="btn prominent">{{ block.primaryButtonLabel }}</button>
+      </div>
+    </div>
+  {% elseif block.type == "halfBlock" %}
+    <section class="image-block">
+      {% set imagePosition = block.blockImagePosition %}
+      {% if imagePosition == "right" %}
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 col-sm-7">
+              <div class="text-block">
+                <h4>{{ block.blockTitle }}</h4>
+                <div class="detail-line"></div>
+                {{ block.blockContent }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="image-holder col-md-6 col-sm-4 pull-right">
+          {% if block.blockImage|length == 1 %}
+            {% set image = block.blockImage.first %}
+            <div class="background-image-holder">
+              <img alt="{{ image.title }}" class="background-image" src="{{ image.getUrl('halfBlock') }}">
+            </div>
+          {% elseif block.blockImage|length > 1 %}
+            <div class="image-slider">
+              <ul class="slides">
+                {% for slideImage in block.blockImage %}
+                  <li>
+                    <div class="background-image-holder top-left">
+                      <img alt="{{ slideImage.title }}" class="background-image" src="{{ slideImage.getUrl('halfBlock') }}">
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif%}
+        </div>
+
+      {% elseif imagePosition == "left" %}
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 col-sm-7 col-md-offset-7 col-sm-offset-5">
+              <div class="text-block">
+                <h4>{{ block.blockTitle }}</h4>
+                <div class="detail-line"></div>
+                {{ block.blockContent }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="image-holder col-md-6 col-sm-4 pull-left">
+          {% if block.blockImage|length == 1 %}
+            {% set image = block.blockImage.first %}
+            <div class="background-image-holder">
+              <img alt="{{ image.title }}" class="background-image" src="{{ image.getUrl('halfBlock') }}">
+            </div>
+          {% elseif block.blockImage|length > 1 %}
+            <div class="image-slider">
+              <ul class="slides">
+                {% for slideImage in block.blockImage %}
+                  <li>
+                    <div class="background-image-holder top-left">
+                      <img alt="{{ slideImage.title }}" class="background-image" src="{{ slideImage.getUrl('halfBlock') }}">
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif%}
+        </div>
+
+      {% endif %}
+
+    </section>
+
+  {% elseif block.type == "textBlock" %}
+
+    {% if block.blockHeading %}
+      <h3 class="alt-font uppercase">{{ block.blockHeading }}</h3>
+    {% endif %}
+
+    {{ block.blockContent }}
+
+  {% elseif block.type == "quoteBlock" %}
+
+    <blockquote>
+      "{{ block.quoteText }}" - {{ block.quoteName }}
+    </blockquote>
+
+  {% elseif block.type == "heading" %}
+    <h3 class="alt-font uppercase">{{ block.headingContent }}</h3>
+  {% endif %}
+
+{% endfor %}
