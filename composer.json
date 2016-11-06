@@ -1,0 +1,5 @@
+{
+    "require": {
+        "imarc/craft-sass": "^1.0"
+    }
+}
