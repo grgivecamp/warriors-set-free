@@ -18,9 +18,9 @@ h1, h2, h3 {
 }
 
 .btn {
-    border-radius: 15px;
+    // border-radius: 15px;
     background-color: transparent;
-    border-color: #ffffff;
+    border: 2px solid #ffffff;
     color: #ffffff;
 }
 
@@ -53,39 +53,6 @@ h1, h2, h3 {
     background-color: #eee;
 }
 
-/* Call To Action Bar */
-.call-to-action {
-    padding: 55px 20px 65px 20px;
-    background-color: #EF4035;
-    color: #ffffff;
-    text-align: center;
-}
-
-.call-to-action .call-to-action-label {
-    font-weight: 400;
-    display: inline-block;
-}
-
-.call-to-action-actions button {
-    margin: 0 5px;
-}
-
-/* Photo Grid */
-.photo-grid .row > div {
-    height: 30vh;
-}
-.photo-grid .text {
-    background-color: #eee;
-}
-
-.photo-grid .text .vertical-center {
-    padding: 0 20px 0 10px;
-}
-
-.photo-grid .image {
-    background-color: #aaa;
-}
-
 /* Emotional Connection */
 .emotional-connection {
     text-align: center;
@@ -94,32 +61,6 @@ h1, h2, h3 {
 }
 .emotional-connection h1 {
     display: inline-block;
-}
-
-/* Packet Request */
-.packet {
-    background-color: #aaa;
-    padding: 4em;
-    color: white;
-}
-
-.packet-testimonial {
-    padding-right: 6em;
-    min-width: 200px;
-}
-
-.packet-request {
-    background-color:#EF4035;
-    padding: 3em;
-}
-
-.packet-request h2 {
-    display:inline-block;
-}
-
-.packet-request button {
-    display:inline-block;
-    float:right;
 }
 
 /* Inner */
@@ -137,4 +78,29 @@ h1, h2, h3 {
 
 .inner-page-section .blank {
     background-color: #ccc;
+}
+
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+  // margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.flex-video.widescreen { padding-bottom: 57.25%; }
+.flex-video.vimeo { padding-top: 0; }
+
+.flex-video iframe,
+.flex-video object,
+.flex-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+  .flex-video { padding-top: 0; }
 }

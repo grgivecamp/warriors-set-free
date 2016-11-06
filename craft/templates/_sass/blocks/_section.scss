@@ -1,0 +1,53 @@
+.section {
+  @extend .row;
+  padding: 40px;
+  &.section--red {
+    background: $brand-primary;
+    h1, h2, h3, h4, h5, h5, h6, p {
+      color: #FFF;
+    }
+  }
+  &.section--photo-grid {
+    padding: 0;
+    margin: 0;
+    .item {
+      height: 250px;
+      &.text {
+        background-color: lighten($brand-secondary, 30);
+        @extend .vertical-center;
+        .vertical-center {
+            padding: 0 20px 0 10px;
+        }
+      }
+      &.image {
+        background-color: #aaa;
+      }
+    }
+  }
+  &.section--packet {
+    background-color: #aaa;
+    padding: 4em;
+    color: white;
+
+    .packet-testimonial {
+        padding-right: 6em;
+        min-width: 200px;
+    }
+
+    .packet-request {
+      background-color:#FFF;
+      padding: 3em;
+      h2 {
+        display:inline-block;
+      }
+      button {
+        display:inline-block;
+        float:right;
+      }
+    }
+  }
+  h1, h2, h3, h4, h5, h5, h6 {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}

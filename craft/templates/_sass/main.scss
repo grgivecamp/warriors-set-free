@@ -25,6 +25,10 @@ $small-screen:     	600px;
 $medium-screen:		960px;
 $large-screen:		1200px;
 
+html {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
 body {
 	margin: 0;
 }
@@ -47,7 +51,12 @@ body {
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "bootstrap",
+  "fontawesome/font-awesome",
+  "blocks/modal",
+  "blocks/buttons",
   "site/site",
   "blocks/nav",
-  "blocks/pageHeader"
+  "blocks/pageHeader",
+  "blocks/section",
+  "blocks/cta"
 ;

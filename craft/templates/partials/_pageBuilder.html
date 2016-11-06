@@ -1,6 +1,31 @@
 {% for block in entry.pageBuilder %}
 
-  {% if block.type == "pageHeader" %}
+  {% if block.type == "pageVideoHeader" %}
+    <div class="pageHeader video">
+      <div class="overlay"></div>
+      <div id="player"></div>
+      <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+            videoId: '{{ block.youtubeVideoId }}',
+            playerVars: {
+              autoplay: 1,
+              controls: 0,
+              modestbranding: 1,
+              loop: 1,
+              playlist: '{{ block.youtubeVideoId }}'
+            }
+          });
+        }
+      </script>
+    </div>
+  {% elseif block.type == "pageHeader" %}
 
     {% if block.headerBackground|length == 1 %}
         {% set image = block.headerBackground.first %}
@@ -19,6 +44,29 @@
           {% if block.headerText|length %}
             {{ block.headerText }}
           {% endif %}
+          <!-- Button trigger modal -->
+          <button id="play-video-button" type="button" class="btn btn-primary btn-lg btn-rounded" data-toggle="modal" data-target="#playVideo">
+            <i class="fa fa-play-circle" aria-hidden="true"></i> Play Video
+          </button>
+
+          <div class="modal fade" id="playVideo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="flex-video widescreen youtube">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/EdS4UqsC-EU" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                  <div class="text">
+                    <h4>Do you or someone you know need help?</h4>
+                  </div>
+                  <div class="action">
+                    <a href="/contact-us" class="btn btn-default btn-block btn-rounded" data-dismiss="modal">Contact Us</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {% if block.headerImage|length == 1 %}
@@ -30,13 +78,24 @@
     </div>
   {% elseif block.type == "callToAction" %}
     <div class="call-to-action row">
-      <h2 class="call-to-action-label">{{ block.ctaTitle }}</h2>
-      {% if block.ctaText|length %}
-        <p>{{ block.ctaText }}</p>
+      <div class="col-md-8 col-md-offset-2">
+        {% if block.ctaTitle|length %}
+        <h2 class="call-to-action-label">{{ block.ctaTitle }}</h2>
+        {% if block.ctaText|length %}
+          <p>{{ block.ctaText }}</p>
+        {% endif %}
+        <div class="call-to-action-actions">
+            <button class="btn">{{ block.secondaryButtonLabel }}</button>
+            <button class="btn prominent">{{ block.primaryButtonLabel }}</button>
+        </div>
+      {% else %}
+        <h2 class="call-to-action-label">Where hurting and Healer connect</h2>
+        <p>"For our struggle is not against flesh and blood, but against...the powers of this dark world and agains the spiritual forces of evil in the heavenly realms." - Ephesians 6:12</p>
+        <div class="call-to-action-actions">
+            <button class="btn">Get Involved</button>
+            <button class="btn prominent">Get Help</button>
+        </div>
       {% endif %}
-      <div class="call-to-action-actions">
-          <button class="btn">{{ block.secondaryButtonLabel }}</button>
-          <button class="btn prominent">{{ block.primaryButtonLabel }}</button>
       </div>
     </div>
   {% elseif block.type == "halfBlock" %}
@@ -117,12 +176,13 @@
     </section>
 
   {% elseif block.type == "textBlock" %}
+    <div class="section section--text">
+      {% if block.textHeading %}
+        <h3 class="alt-font uppercase">{{ block.textHeading }}</h3>
+      {% endif %}
 
-    {% if block.blockHeading %}
-      <h3 class="alt-font uppercase">{{ block.blockHeading }}</h3>
-    {% endif %}
-
-    {{ block.blockContent }}
+      {{ block.textContent }}
+    </div>
 
   {% elseif block.type == "quoteBlock" %}
 

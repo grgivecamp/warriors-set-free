@@ -16,6 +16,8 @@
 {% extends "_layout" %}
 
 {% block content %}
+  {% include 'partials/_pageHeader' %}
+  {% include 'partials/_pageBuilder' %}
 	<article>
 		<h1>{{ entry.title }}</h1>
 		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>

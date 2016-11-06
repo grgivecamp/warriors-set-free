@@ -1,0 +1,50 @@
+.modal {
+  .modal-content {
+    border-radius: 0;
+    margin-top: 45px;
+    .close {
+      background: #FFF;
+      width: 40px;
+      height: 40px;
+      opacity: 1;
+      top: -40px;
+      right: 0;
+      position: absolute;
+    }
+    .modal-footer {
+      background: $brand-primary;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: inherit;
+      margin-top: -1px;
+      padding: 20px;
+      h1, h2, h3, h4, h5, h6, p {
+        color: #FFF;
+      }
+      .text {
+        width: 70%;
+        min-width: 400px;
+      }
+      .action {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    .modal-footer {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .modal {
+    .modal-dialog {
+      width: 800px;
+    }
+  }
+}

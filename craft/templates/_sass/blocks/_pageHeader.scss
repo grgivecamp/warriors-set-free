@@ -2,7 +2,7 @@
   @extend .row;
   @extend .main-title-area;
   display: flex;
-  height: 80vh;
+  height: 500px;
   &:not(.has-background) {
     .header-textarea {
       background: #FFF;
@@ -13,16 +13,24 @@
       h1, h2, p {
         color: #FFF;
       }
-      h1 {
-        font-weight: 400;
-      }
-      h2 {
-        font-weight: 200;
-        font-size: 1.5em;
-      }
-      p {
-        line-height: 1.5em;
-      }
+    }
+  }
+  &.video {
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+    }
+    #player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
     }
   }
   .header-textarea,
@@ -31,15 +39,37 @@
     height: 100%;
   }
   .header-textarea {
-    padding: 20px;
+    padding: 40px;
     @extend .vertical-center;
+    h1 {
+      font-weight: 700;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 1.5em;
+    }
+    p {
+      line-height: 1.75em;
+    }
+    #play-video-button {
+      display: flex;
+      align-items: center;
+      padding: 5px 20px 5px 10px;
+      margin-top: 25px;
+      text-transform: uppercase;
+      .fa {
+        font-size: 1.75em;
+        margin-right: 10px;
+      }
+    }
   }
   .header-image {
     position: relative;
     img {
       position: absolute;
       bottom: 0;
-      left: calc(50% - 250px);
+      left: calc(50% - 300px);
+      max-width: 95%;
     }
   }
   &.has-image {

@@ -1,0 +1,18 @@
+/* Call To Action Bar */
+.call-to-action {
+    @extend .section;
+    background-color: $brand-primary;
+    color: #ffffff;
+    text-align: center;
+    .call-to-action-label {
+        font-weight: 400;
+        display: inline-block;
+    }
+    .btn {
+        margin: 10px 5px 0;
+        border-radius: 50px;
+        padding: 10px 40px;
+        border: 2px solid #FFF;
+        font-size: 1.25em;
+    }
+}
