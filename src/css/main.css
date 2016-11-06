@@ -1,5 +1,4 @@
 body {
-    /*max-width: 1400px;*/
     margin: auto
 }
 
@@ -12,9 +11,9 @@ h1, h2, h3 {
 }
 
 .vertical-center {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex;    
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -87,18 +86,16 @@ h1, h2, h3 {
     left: -1px;
     background-color: #ffffff;
 }
+
 .logo-container img {
     height: 75px;
 }
 
 /* Main Title Area */
 .main-title-area {
-    position: relative;
     height: 70vh;
     background-color: #eee;
-    z-index: -1;
 }
-
 
 /* Call To Action Bar */
 .call-to-action {
@@ -147,9 +144,6 @@ h1, h2, h3 {
 .packet {
     background-color: #aaa;
     padding: 4em;
-    display: flex;    
-    align-items: center;
-    flex-wrap: wrap;
     color: white;
 }
 
@@ -173,14 +167,12 @@ h1, h2, h3 {
 }
 
 /* Inner */
-.inner-page-title .row > div {
+.inner-page-title {
     height: 50vh;
-    z-index: -1;
 }
 
-.inner-page-section .row > div {
+.flexible-content div {
     height: 30vh;
-    z-index: -1;
 }
 
 .inner-page-section .text {
@@ -188,4 +180,5 @@ h1, h2, h3 {
 }
 
 .inner-page-section .blank {
-    background-color: #aaa;
+    background-color: #ccc;
+}
