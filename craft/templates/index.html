@@ -20,14 +20,55 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
+  <!--Main title area-->
+  <div class="container-fluid main-title-area row vertical-center">
+      <div class="col-md-6">
+          <h1>Main Title Area</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      </div>
+  </div>
 
-	{{ entry.body }}
+  <!-- Call to action bar -->
+  <div class="container-fluid call-to-action row">
+      <!-- Roughly 15vh in height -->
+      <h3 class="call-to-action-label">Where hurting and healing connect</h3>
+      <div class="call-to-action-actions">
+          <button class="btn">GET INVOLVED</button>
+          <button class="btn prominent">GET HELP</button>
+      </div>
+  </div>
 
-	<h2>Recent News</h2>
-	<ul>
-		{% for entry in craft.entries.section('news').limit(5).find() %}
-			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-		{% endfor %}
-	</ul>
+
+  <!-- Photo grid -->
+  <div class="container-fluid photo-grid row">
+      <div class="row">
+          <div class="text col-md-4 col-xs-9 vertical-center">
+              <div>
+                  <h3>Free & confidential</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
+          </div>
+          <div class="image col-md-4 col-xs-3">Image</div>
+          <div class="text col-md-4 col-md-push-0 col-xs-9 col-xs-push-3 vertical-center">
+              <div>
+                  <h3>Biblical & Faith-Based</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
+          </div>
+          <div class="image col-md-4 col-md-pull-0 col-xs-3 col-xs-pull-9">Image</div>
+          <div class="text col-md-4 col-xs-9 vertical-center">
+              <div>
+                  <h3>Private Support Network</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
+          </div>
+          <div class="image col-md-4 col-xs-3">Image</div>
+      </div>
+  </div>
+
+  <!-- Emotional connection -->
+  <div class="container-fluid emotional-connection row">
+      <h1 class="col-md-12">You are not alone</h1>
+      <p class="col-md-6 col-md-offset-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
 {% endblock %}
